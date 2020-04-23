@@ -1,0 +1,1 @@
+java -jar storage-1.1.0.jar
