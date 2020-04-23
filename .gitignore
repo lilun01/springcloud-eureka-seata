@@ -40,7 +40,6 @@ rmbsp
 *.7z
 *.dmg
 *.iso
-*.jar
 *.rar
 *.tar
 *.zip
