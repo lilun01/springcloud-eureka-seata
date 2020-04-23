@@ -1,0 +1,25 @@
+server:
+  port: 8082
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /
+    
+spring:
+  profiles:
+    active: dev
+    
+management:
+  endpoint:
+    # 启用pause端点   服务调用 http://ip:port/actuator/pause  实现服务优雅上线下
+    pause:
+      enabled: true
+    # 启用restart端点，之所以要启用restart端点，是因为pause端点的启用依赖restart端点的启用。详见：https://cloud.spring.io/spring-cloud-static/Finchley.SR2/single/spring-cloud.html#_endpoints
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: pause,restart    
+
+

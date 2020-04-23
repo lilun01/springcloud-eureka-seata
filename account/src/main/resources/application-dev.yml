@@ -1,0 +1,28 @@
+---
+spring:
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: my_test_tx_group
+  application:
+    name: account-service
+  datasource:
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/fescar?useSSL=false&serverTimezone=UTC
+    username: root
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+logging:
+  level:
+    io:
+      seata: debug
+feign:
+  hystrix:
+    enabled: true
