@@ -22,11 +22,17 @@ public class OrderController {
 	@GetMapping(value = "/create", produces = "application/json")
 	public Boolean create(String userId, String commodityCode, Integer count) throws InterruptedException {
 
-        Thread.sleep(3000);
-		 
+		System.out.println("进入了order1111111");
 		//int i = 1/0;
+        Thread.sleep(1000);
 		System.out.println("调用了订单服务 userId=" + userId + ",commodityCode = " + commodityCode);
 		// orderService.create(userId, commodityCode, count);
+		return true;
+	}
+	@GetMapping(value = "/create2")
+	public Boolean create2( ) throws InterruptedException {
+		
+		System.out.println("进入了order create2");
 		return true;
 	}
 

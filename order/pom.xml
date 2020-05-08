@@ -6,6 +6,7 @@
         <artifactId>springcloud-eureka-seata</artifactId>
         <groupId>io.seata</groupId>
         <version>1.1.0</version>
+        <relativePath>..</relativePath> <!-- lookup parent from repository -->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
